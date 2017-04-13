@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="13px" viewBox="0 0 20 13" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
+    <title>sidebar-toggle</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Top-Bar" transform="translate(-32.000000, -28.000000)">
+            <g id="sidebar-toggle">
+                <g transform="translate(32.000000, 28.000000)">
+                    <path d="M0,12 L20,12 L20,13 L0,13 L0,12 Z M7,6 L20,6 L20,7 L7,7 L7,6 Z M0,0 L20,0 L20,1 L0,1 L0,0 Z" id="toggle-lines" fill="#7D899B"></path>
+                    <path d="M4.375,5.04166667 C4.375,5.15451445 4.34407583,5.25216973 4.28222656,5.33463542 L2.09472656,8.25130208 C2.03287729,8.33376777 1.95963584,8.375 1.875,8.375 C1.79036416,8.375 1.71712271,8.33376777 1.65527344,8.25130208 L-0.532226562,5.33463542 C-0.59407583,5.25216973 -0.625,5.15451445 -0.625,5.04166667 C-0.625,4.92881888 -0.59407583,4.83116361 -0.532226562,4.74869792 C-0.470377295,4.66623223 -0.39713584,4.625 -0.3125,4.625 L4.0625,4.625 C4.14713584,4.625 4.22037729,4.66623223 4.28222656,4.74869792 C4.34407583,4.83116361 4.375,4.92881888 4.375,5.04166667 Z" id="toggle-arrrow" fill="#29AB58" transform="translate(1.875000, 6.500000) rotate(-270.000000) translate(-1.875000, -6.500000) "></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+  <title>Main Dashboard | Upinus</title>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Roboto:300,400,700&amp;subset=vietnamese" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/fonts.css" media="all"/>
+  <link rel="stylesheet" href="css/grid.css"/>
+  <link rel="stylesheet" href="css/zebra_datepicker.css" type="text/css">
+  <link rel="stylesheet" href="css/style.css"/>
+  <script type="text/javascript" src="js/w3data.js"></script>
+  <script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+  <script type="text/javascript" src="js/highcharts.js"></script>
+  <script type="text/javascript" src="js/exporting.js"></script>
+  <script type="text/javascript" src="js/zebra_datepicker.js"></script>
+</head>
+<body>
+<div id="body">
+  <input type="checkbox" id="sidebar_toggler" class="nodis"/>
+  <div id="side_nav" w3-include-html="sidebar.html"></div>
+  <div id="main_content">
+    <div id="body_nav">
+      <div class="wrap cols body_nav-wrap clearfix">
+        <div class="col-12 centered-col">
+          <div class="body_nav-actions float-left">
+            <label for="sidebar_toggler" class="side_nav-toggle svg-icon"><img src="images/sidebar-toggle.svg" alt=""></label>
+            <ul class="body_nav-breadcrumbs">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="products-my_products.html">Products</a></li>
+              <li><a href="products-pinned_list.html">Pinned List</a></li>
+            </ul>
+          </div>
+          <div class="body_nav-actions float-right">
+            <ul class="body_nav-action-menu">
+              <li><a href="">Go to AliExpress</a></li>
+              <li><a href="">Go to Your Shop</a></li>
+              <li>
+                <a href="" class="icon svg-icon setting_menu_trigger"><img src="images/menu/nav-setting.svg" alt=""></a>
+                <div class="body_nav-drop_menu setting_menu">
+                  <ul class="body_nav-drop_menu-list">
+                    <li><a href="settings.html"> &nbsp;Settings</a></li>
+                    <li><a href=""> &nbsp;Log out</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a href="" class="icon svg-icon body_nav-notificator has_noti"><img src="images/menu/nav-notification.svg" alt=""></a>
+                <div class="body_nav-drop_menu notification_menu">
+                  <div class="notification_menu-content"><p class="empty">You don’t have any notifications</p></div>
+                  <div class="notification_menu-actions"><a href="">View all notification</a></div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="wrap cols">
+      <div class="col-12 centered-col">
+        <div class="head_table-actions">
+          <div class="head_table-left_actions">
+            <div class="input-wrap big">
+              <label for="datepicker" class="icon_label datepicker divided"></label>
+              <input type="text" id="datepicker" class="input datepicker" placeholder="Choose date">
+            </div>
+          </div>
+          <div class="head_table-right_actions text-right">
+            <div class="input-wrap big">
+              <input type="text" class="input" style="width: 260px" placeholder="Enter keywords">
+              <a href="" class="btn"> &nbsp; Filter</a>
+            </div>
+          </div>
+        </div>
+        <div class="pinned_list">
+          <div class="col-3">
+            <div class="block pinned_item">
+              <label class="checkbox-wrap pinned_check"><input type="checkbox" class="nodis table-row-select" check-label="product-check"><span class="checkbox"></span></label>
+              <div class="pinned_item-thumb"><a href="" thumb-title=" &nbsp; Open in Aliexpress"><img src="images/products/sp-p-1.jpg" alt=""></a></div>
+              <div class="pinned_item-info">
+                <div class="pinned_item-date">Imported at <b>22/03/2017</b></div>
+                <p><a href="edit-products-pinned_list.html">Canvasartisan women small storage bags for key card phone coin... </a></p>
+                <div class="pinned_item-price_wrap">
+                  <span class="pinned_item-price">US $3.79</span> /unit
+                </div>
+              </div>
+              <a href="edit-products-pinned_list.html" class="btn big blocker white"> &nbsp; Edit &amp; Push</a>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="block pinned_item">
+              <label class="checkbox-wrap pinned_check"><input type="checkbox" class="nodis table-row-select" check-label="product-check"><span class="checkbox"></span></label>
+              <div class="pinned_item-thumb"><a href="" thumb-title=" &nbsp; Open in Aliexpress"><img src="images/products/sp-p-1.jpg" alt=""></a></div>
+              <div class="pinned_item-info">
+                <div class="pinned_item-date">Imported at <b>22/03/2017</b></div>
+                <p><a href="edit-products-pinned_list.html">Canvasartisan women small storage bags for key card phone coin... </a></p>
+                <div class="pinned_item-price_wrap">
+                  <span class="pinned_item-price">US $3.79</span> /unit
+                </div>
+              </div>
+              <a href="edit-products-pinned_list.html" class="btn big blocker white"> &nbsp; Edit &amp; Push</a>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="block pinned_item">
+              <label class="checkbox-wrap pinned_check"><input type="checkbox" class="nodis table-row-select" check-label="product-check"><span class="checkbox"></span></label>
+              <div class="pinned_item-thumb"><a href="" thumb-title=" &nbsp; Open in Aliexpress"><img src="images/products/sp-p-1.jpg" alt=""></a></div>
+              <div class="pinned_item-info">
+                <div class="pinned_item-date">Imported at <b>22/03/2017</b></div>
+                <p><a href="edit-products-pinned_list.html">Canvasartisan women small storage bags for key card phone coin... </a></p>
+                <div class="pinned_item-price_wrap">
+                  <span class="pinned_item-price">US $3.79</span> /unit
+                </div>
+              </div>
+              <a href="edit-products-pinned_list.html" class="btn big blocker white"> &nbsp; Edit &amp; Push</a>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="block pinned_item">
+              <label class="checkbox-wrap pinned_check"><input type="checkbox" class="nodis table-row-select" check-label="product-check"><span class="checkbox"></span></label>
+              <div class="pinned_item-thumb"><a href="" thumb-title=" &nbsp; Open in Aliexpress"><img src="images/products/sp-p-1.jpg" alt=""></a></div>
+              <div class="pinned_item-info">
+                <div class="pinned_item-date">Imported at <b>22/03/2017</b></div>
+                <p><a href="edit-products-pinned_list.html">Canvasartisan women small storage bags for key card phone coin... </a></p>
+                <div class="pinned_item-price_wrap">
+                  <span class="pinned_item-price">US $3.79</span> /unit
+                </div>
+              </div>
+              <a href="edit-products-pinned_list.html" class="btn big blocker white"> &nbsp; Edit &amp; Push</a>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="block pinned_item">
+              <label class="checkbox-wrap pinned_check"><input type="checkbox" class="nodis table-row-select" check-label="product-check"><span class="checkbox"></span></label>
+              <div class="pinned_item-thumb"><a href="" thumb-title=" &nbsp; Open in Aliexpress"><img src="images/products/sp-p-1.jpg" alt=""></a></div>
+              <div class="pinned_item-info">
+                <div class="pinned_item-date">Imported at <b>22/03/2017</b></div>
+                <p><a href="edit-products-pinned_list.html">Canvasartisan women small storage bags for key card phone coin... </a></p>
+                <div class="pinned_item-price_wrap">
+                  <span class="pinned_item-price">US $3.79</span> /unit
+                </div>
+              </div>
+              <a href="edit-products-pinned_list.html" class="btn big blocker white"> &nbsp; Edit &amp; Push</a>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="block pinned_item">
+              <label class="checkbox-wrap pinned_check"><input type="checkbox" class="nodis table-row-select" check-label="product-check"><span class="checkbox"></span></label>
+              <div class="pinned_item-thumb"><a href="" thumb-title=" &nbsp; Open in Aliexpress"><img src="images/products/sp-p-1.jpg" alt=""></a></div>
+              <div class="pinned_item-info">
+                <div class="pinned_item-date">Imported at <b>22/03/2017</b></div>
+                <p><a href="edit-products-pinned_list.html">Canvasartisan women small storage bags for key card phone coin... </a></p>
+                <div class="pinned_item-price_wrap">
+                  <span class="pinned_item-price">US $3.79</span> /unit
+                </div>
+              </div>
+              <a href="edit-products-pinned_list.html" class="btn big blocker white"> &nbsp; Edit &amp; Push</a>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="block pinned_item">
+              <label class="checkbox-wrap pinned_check"><input type="checkbox" class="nodis table-row-select" check-label="product-check"><span class="checkbox"></span></label>
+              <div class="pinned_item-thumb"><a href="" thumb-title=" &nbsp; Open in Aliexpress"><img src="images/products/sp-p-1.jpg" alt=""></a></div>
+              <div class="pinned_item-info">
+                <div class="pinned_item-date">Imported at <b>22/03/2017</b></div>
+                <p><a href="edit-products-pinned_list.html">Canvasartisan women small storage bags for key card phone coin... </a></p>
+                <div class="pinned_item-price_wrap">
+                  <span class="pinned_item-price">US $3.79</span> /unit
+                </div>
+              </div>
+              <a href="edit-products-pinned_list.html" class="btn big blocker white"> &nbsp; Edit &amp; Push</a>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="block pinned_item">
+              <label class="checkbox-wrap pinned_check"><input type="checkbox" class="nodis table-row-select" check-label="product-check"><span class="checkbox"></span></label>
+              <div class="pinned_item-thumb"><a href="" thumb-title=" &nbsp; Open in Aliexpress"><img src="images/products/sp-p-1.jpg" alt=""></a></div>
+              <div class="pinned_item-info">
+                <div class="pinned_item-date">Imported at <b>22/03/2017</b></div>
+                <p><a href="edit-products-pinned_list.html">Canvasartisan women small storage bags for key card phone coin... </a></p>
+                <div class="pinned_item-price_wrap">
+                  <span class="pinned_item-price">US $3.79</span> /unit
+                </div>
+              </div>
+              <a href="edit-products-pinned_list.html" class="btn big blocker white"> &nbsp; Edit &amp; Push</a>
+            </div>
+          </div>
+        </div>
+        <div class="table_actions_menu" check-action="product-check">
+          <div class="table_actions">
+            <div class="table_action_item table-selected_counter">
+              <a href="" class="select-all-row" check-target="product-check"><span class="tooltip">Check all</span></a>
+              <span class="table-selected_number main-color" check-counter="product-check">0</span> <b>Item(s)</b> selected
+            </div>
+          </div>
+          <div class="table_actions text-right">
+            <a href="" class="btn outline red spaced"> &nbsp; Delete selected</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="block padded block-popup narrow heavypadded text-center" id="platform-review">
+    <a href="javascript:;" class="close-popup"><img src="images/close-p.svg" alt=""></a>
+    <h2 class="h3 block-title uppercase">Keep Upinus Free Forever</h2>
+    <img src="images/stars-line.svg" alt="" class="divided-img">
+    <p class="para h6">If you like Upinus , please kindly leave us a <b>5-star review</b></p>
+    <p class="para h6">Your review will motivate us to work harder, create more powerful features, and keep this app <b>FREE FOREVER</b> for you.</p>
+    <div class="product-images-actions clearfix">
+      <a href="javascript:;" class="btn wide end-popup">Write a Quick Review</a>
+      <div><a href="" class="low-end text-color end-popup">I already wrote a Review</a></div>
+    </div>
+  </div>
+  <div class="overlayer"></div>
+</div>
+<script>w3IncludeHTML();</script>
+<script type="text/javascript" src="js/scripts.js"></script>
+</body>
+</html>

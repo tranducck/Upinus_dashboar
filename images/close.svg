@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="13px" height="13px" viewBox="0 0 13 13" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
+    <title>close</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Dashboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Head-Notification" transform="translate(-1373.000000, -118.000000)" fill="#4F545A">
+            <path d="M1378.72121,123.722003 L1371.64429,123.722003 L1371.64429,125.568156 L1378.72121,125.568156 L1378.72121,132.645079 L1380.56737,132.645079 L1380.56737,125.568156 L1387.64429,125.568156 L1387.64429,123.722003 L1380.56737,123.722003 L1380.56737,116.645079 L1378.72121,116.645079 L1378.72121,123.722003 Z" id="close" transform="translate(1379.644291, 124.645079) rotate(-315.000000) translate(-1379.644291, -124.645079) "></path>
+        </g>
+    </g>
+</svg>

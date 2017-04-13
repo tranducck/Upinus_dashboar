@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="15px" height="15px" viewBox="0 0 15 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
+    <title>close-p</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Dashboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Product-Pinned-w/-Item-edit-Change-Image" transform="translate(-1085.000000, -392.000000)" fill="#4F545A">
+            <g id="Rectangle-8" transform="translate(326.000000, 377.000000)">
+                <path d="M765.427223,21.4272231 L757.644291,21.4272231 L757.644291,23.4575532 L765.427223,23.4575532 L765.427223,31.2404852 L767.457553,31.2404852 L767.457553,23.4575532 L775.240485,23.4575532 L775.240485,21.4272231 L767.457553,21.4272231 L767.457553,13.6442911 L765.427223,13.6442911 L765.427223,21.4272231 Z" id="close-p" transform="translate(766.442388, 22.442388) rotate(-315.000000) translate(-766.442388, -22.442388) "></path>
+            </g>
+        </g>
+    </g>
+</svg>

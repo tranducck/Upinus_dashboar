@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+  <title>Main Dashboard | Upinus</title>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Roboto:300,400,700&amp;subset=vietnamese" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/fonts.css" media="all"/>
+  <link rel="stylesheet" href="css/grid.css"/>
+  <link rel="stylesheet" href="css/zebra_datepicker.css" type="text/css">
+  <link rel="stylesheet" href="css/style.css"/>
+  <script type="text/javascript" src="js/w3data.js"></script>
+  <script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+  <script type="text/javascript" src="js/highcharts.js"></script>
+  <script type="text/javascript" src="js/exporting.js"></script>
+  <script type="text/javascript" src="js/zebra_datepicker.js"></script>
+</head>
+<body>
+<div id="body">
+  <input type="checkbox" id="sidebar_toggler" class="nodis"/>
+  <div id="side_nav" w3-include-html="sidebar.html"></div>
+  <div id="main_content">
+    <div id="body_nav">
+      <div class="wrap cols body_nav-wrap clearfix">
+        <div class="col-12 centered-col">
+          <div class="body_nav-actions float-left">
+            <label for="sidebar_toggler" class="side_nav-toggle svg-icon"><img src="images/sidebar-toggle.svg" alt=""></label>
+            <ul class="body_nav-breadcrumbs">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="index.html">Dashboard</a></li>
+            </ul>
+          </div>
+          <div class="body_nav-actions float-right">
+            <ul class="body_nav-action-menu">
+              <li><a href="">Go to AliExpress</a></li>
+              <li><a href="">Go to Your Shop</a></li>
+              <li>
+                <a href="" class="icon svg-icon setting_menu_trigger"><img src="images/menu/nav-setting.svg" alt=""></a>
+                <div class="body_nav-drop_menu setting_menu">
+                  <ul class="body_nav-drop_menu-list">
+                    <li><a href="settings.html"> &nbsp;Settings</a></li>
+                    <li><a href=""> &nbsp;Log out</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a href="" class="icon svg-icon body_nav-notificator has_noti"><img src="images/menu/nav-notification.svg" alt=""></a>
+                <div class="body_nav-drop_menu notification_menu">
+                  <div class="notification_menu-content"><p class="empty">You don’t have any notifications</p></div>
+                  <div class="notification_menu-actions"><a href="">View all notification</a></div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="wrap cols">
+      <div class="col-12 centered-col">
+        <div class="body-heading text-center spaced">
+          <h2 class="h1">Good Afternoon!</h2>
+          <p>Here’s what’s happening with your store today.</p>
+        </div>
+        <div class="body_charts clearfix">
+          <div class="col-3"><div class="block body_chart chart-small_view">
+            <div class="body_chart-info">
+              <a href="javascript:;" class="body_chart-info-menu-toggle"><img src="images/more.svg" alt=""></a>
+              <div class="body_chart-info-menu">
+                <div><b>Choose Graph</b></div>
+                <ul class="body_chart-info-menu-list">
+                  <li><a href="" class="selected">Revenues</a></li>
+                  <li><a href="">Orders</a></li>
+                  <li><a href="">Items</a></li>
+                  <li><a href="">Earnings</a></li>
+                  <li><a href="">Cost</a></li>
+                  <li><a href="">My Products</a></li>
+                </ul>
+              </div>
+              <span>Revenues</span>
+              <div class="stat up">$1530</div>
+              <p>Total Revenue <span class="positive">+25%</span></p>
+            </div>
+            <div class="body_chart-content">
+              <svg style="height: 0" class="color-station">
+                <defs><linearGradient id="gradient-0" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0" /><stop offset="1" />
+                </linearGradient></defs>
+              </svg>
+              <div id="total-revenue" class="chart_content" style="min-width: 220px; height: 80px; margin: 0 auto"></div>
+            </div>
+            <style>
+            #gradient-0 stop {stop-color: #EEA100}
+            #total-revenue .highcharts-area {fill: url(#gradient-0)}
+            </style>
+            <script>
+            Highcharts.chart('total-revenue', {
+              chart: {type: 'area',spacing: [0, 0, 0, 0]},
+              navigation: {buttonOptions: {enabled: false,}},
+              credits: {enabled: false,},legend: {enabled: false,},
+              tooltip: {enabled: true,shadow: false},
+              title: {text: ''},subtitle: {text: ''},
+              xAxis: {
+                categories: ['23/03/2017', '24/03/2017', '25/03/2017', '26/03/2017', '27/03/2017', '28/03/2017', '29/03/2017'],
+                tickmarkPlacement: 'on',
+                title: {
+                  enabled: false
+                },visible: false
+              },
+              yAxis: {
+                title: {text: ''},visible: false,
+                labels: {formatter: function() {return this.value / 1000;}}
+              },
+              plotOptions: {
+                area: {
+                  lineColor: '#EEA100',
+                  stacking: 'normal',lineWidth: 1,
+                  marker: {radius: 1,enabled: false}
+                }
+              },
+              series: [{
+                name: 'Total Revenue',
+                data: [502, 635, 809, 768, 1002, 1434, 1668],
+                color: '#EEA100',
+                pointPlacement: "on",
+                fillColor: {
+                  stops: [
+                    [0, Highcharts.getOptions().colors[0]],
+                    [1, Highcharts.Color(Highcharts.getOptions().colors[0]).setOpacity(0).get('rgba')]
+                  ]
+                }
+              }]
+            });
+            </script>
+          </div></div>
+          <div class="col-3"><div class="block body_chart chart-small_view">
+            <div class="body_chart-info">
+              <a href="javascript:;" class="body_chart-info-menu-toggle"><img src="images/more.svg" alt=""></a>
+              <div class="body_chart-info-menu">
+                <div><b>Choose Graph</b></div>
+                <ul class="body_chart-info-menu-list">
+                  <li><a href="" class="selected">Revenues</a></li>
+                  <li><a href="">Orders</a></li>
+                  <li><a href="">Items</a></li>
+                  <li><a href="">Earnings</a></li>
+                  <li><a href="">Cost</a></li>
+                  <li><a href="">My Products</a></li>
+                </ul>
+              </div>
+              <span>In Progressing</span>
+              <div class="stat down">1145</div>
+              <p>Total In Progressing <span class="negative">-15%</span></p>
+            </div>
+            <div class="body_chart-content">
+              <svg style="height: 0" class="color-station">
+                <defs><linearGradient id="gradient-1" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0" /><stop offset="1" />
+                </linearGradient></defs>
+              </svg>
+              <div id="total-inprogressing" class="chart_content" style="min-width: 220px; height: 80px; margin: 0 auto"></div>
+            </div>
+            <style>
+            #gradient-1 stop {stop-color: #00C650}
+            #total-inprogressing .highcharts-area {fill: url(#gradient-1)}
+            </style>
+            <script>
+            Highcharts.chart('total-inprogressing', {
+              chart: {type: 'area',spacing: [0, 0, 0, 0]},
+              navigation: {buttonOptions: {enabled: false,}},
+              credits: {enabled: false,},legend: {enabled: false,},
+              tooltip: {enabled: true,shadow: false},
+              title: {text: ''},subtitle: {text: ''},
+              xAxis: {
+                categories: ['23/03/2017', '24/03/2017', '25/03/2017', '26/03/2017', '27/03/2017', '28/03/2017', '29/03/2017'],
+                tickmarkPlacement: 'on',
+                title: {
+                  enabled: false
+                },visible: false
+              },
+              yAxis: {
+                title: {text: ''},visible: false,
+                labels: {formatter: function() {return this.value / 1000;}}
+              },
+              plotOptions: {
+                area: {
+                  lineColor: '#00C650',
+                  stacking: 'normal',lineWidth: 1,
+                  marker: {radius: 1,enabled: false}
+                }
+              },
+              series: [{
+                name: 'Total In Progressing',
+                data: [502, 728, 492, 456, 321, 253],
+                color: '#00C650',
+                pointPlacement: "on",
+                fillColor: {
+                  stops: [
+                    [0, Highcharts.getOptions().colors[0]],
+                    [1, Highcharts.Color(Highcharts.getOptions().colors[0]).setOpacity(0).get('rgba')]
+                  ]
+                }
+              }]
+            });
+            </script>
+          </div></div>
+          <div class="col-3"><div class="block body_chart chart-small_view">
+            <div class="body_chart-info">
+              <a href="javascript:;" class="body_chart-info-menu-toggle"><img src="images/more.svg" alt=""></a>
+              <div class="body_chart-info-menu">
+                <div><b>Choose Graph</b></div>
+                <ul class="body_chart-info-menu-list">
+                  <li><a href="" class="selected">Revenues</a></li>
+                  <li><a href="">Orders</a></li>
+                  <li><a href="">Items</a></li>
+                  <li><a href="">Earnings</a></li>
+                  <li><a href="">Cost</a></li>
+                  <li><a href="">My Products</a></li>
+                </ul>
+              </div>
+              <span>Orders</span>
+              <div class="stat up">1530</div>
+              <p>Total Orders <span class="positive">+25%</span></p>
+            </div>
+            <div class="body_chart-content">
+              <svg style="height: 0" class="color-station">
+                <defs><linearGradient id="gradient-2" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0" /><stop offset="1" />
+                </linearGradient></defs>
+              </svg>
+              <div id="total-oders" class="chart_content" style="min-width: 220px; height: 80px; margin: 0 auto"></div>
+            </div>
+            <style>
+            #gradient-2 stop {stop-color: #9012FE}
+            #total-oders .highcharts-area {fill: url(#gradient-2)}
+            </style>
+            <script>
+            Highcharts.chart('total-oders', {
+              chart: {type: 'area',spacing: [0, 0, 0, 0]},
+              navigation: {buttonOptions: {enabled: false,}},
+              credits: {enabled: false,},legend: {enabled: false,},
+              tooltip: {enabled: true,shadow: false},
+              title: {text: ''},subtitle: {text: ''},
+              xAxis: {
+                categories: ['23/03/2017', '24/03/2017', '25/03/2017', '26/03/2017', '27/03/2017', '28/03/2017', '29/03/2017'],
+                tickmarkPlacement: 'on',
+                title: {
+                  enabled: false
+                },visible: false
+              },
+              yAxis: {
+                title: {text: ''},visible: false,
+                labels: {formatter: function() {return this.value / 1000;}}
+              },
+              plotOptions: {
+                area: {
+                  lineColor: '#9012FE',
+                  stacking: 'normal',lineWidth: 1,
+                  marker: {radius: 1,enabled: false}
+                }
+              },
+              series: [{
+                name: 'Total Orders',
+                data: [502, 635, 928, 1024, 1280, 1434, 1120],
+                color: '#9012FE',
+                pointPlacement: "on",
+                fillColor: {
+                  stops: [
+                    [0, Highcharts.getOptions().colors[0]],
+                    [1, Highcharts.Color(Highcharts.getOptions().colors[0]).setOpacity(0).get('rgba')]
+                  ]
+                }
+              }]
+            });
+            </script>
+          </div></div>
+          <div class="col-3"><div class="block body_chart chart-small_view">
+            <div class="body_chart-info">
+              <a href="javascript:;" class="body_chart-info-menu-toggle"><img src="images/more.svg" alt=""></a>
+              <div class="body_chart-info-menu">
+                <div><b>Choose Graph</b></div>
+                <ul class="body_chart-info-menu-list">
+                  <li><a href="" class="selected">Revenues</a></li>
+                  <li><a href="">Orders</a></li>
+                  <li><a href="">Items</a></li>
+                  <li><a href="">Earnings</a></li>
+                  <li><a href="">Cost</a></li>
+                  <li><a href="">My Products</a></li>
+                </ul>
+              </div>
+              <span>Items</span>
+              <div class="stat up">2312</div>
+              <p>Total Items <span class="positive">+14%</span></p>
+            </div>
+            <div class="body_chart-content">
+              <svg style="height: 0" class="color-station">
+                <defs><linearGradient id="gradient-3" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0" /><stop offset="1" />
+                </linearGradient></defs>
+              </svg>
+              <div id="total-items" class="chart_content" style="min-width: 220px; height: 80px; margin: 0 auto"></div>
+            </div>
+            <style>
+            #gradient-3 stop {stop-color: #23AFFE}
+            #total-items .highcharts-area {fill: url(#gradient-3)}
+            </style>
+            <script>
+            Highcharts.chart('total-items', {
+              chart: {type: 'area',spacing: [0, 0, 0, 0]},
+              navigation: {buttonOptions: {enabled: false,}},
+              credits: {enabled: false,},legend: {enabled: false,},
+              tooltip: {enabled: true,shadow: false},
+              title: {text: ''},subtitle: {text: ''},
+              xAxis: {
+                categories: ['23/03/2017', '24/03/2017', '25/03/2017', '26/03/2017', '27/03/2017', '28/03/2017', '29/03/2017'],
+                tickmarkPlacement: 'on',
+                title: {
+                  enabled: false
+                },visible: false
+              },
+              yAxis: {
+                title: {text: ''},visible: false,
+                labels: {formatter: function() {return this.value / 1000;}}
+              },
+              plotOptions: {
+                area: {
+                  lineColor: '#23AFFE',
+                  stacking: 'normal',lineWidth: 1,
+                  marker: {radius: 1,enabled: false}
+                }
+              },
+              series: [{
+                name: 'Total Items',
+                data: [502, 423, 366, 768, 1892, 1434, 1668],
+                color: '#23AFFE',
+                pointPlacement: "on",
+                fillColor: {
+                  stops: [
+                    [0, Highcharts.getOptions().colors[0]],
+                    [1, Highcharts.Color(Highcharts.getOptions().colors[0]).setOpacity(0).get('rgba')]
+                  ]
+                }
+              }]
+            });
+            </script>
+          </div></div>
+          <div class="col-12"><div class="block body_chart chart-side_view">
+            <div class="body_chart-actions float-right">
+              <div class="input-wrap spaced big">
+                <label for="datepicker" class="icon_label datepicker divided"></label>
+                <input type="text" id="datepicker" class="input datepicker" placeholder="Choose date">
+              </div>
+              <div class="input-wrap big lspaced">
+                <select name="" id="" class="input" required>
+                  <option value="" default disabled selected>Select Date Range</option>
+                  <option value="1">Today</option>
+                  <option value="2">Yesterday</option>
+                  <option value="3">Last week</option>
+                  <option value="4">Last month</option>
+                  <option value="5">Last 7 days</option>
+                  <option value="6">Last 30 days</option>
+                </select>
+              </div>
+            </div>
+            <h3 class="h5 body_chart-actions-carry body_chart-title">Total Revenues last week</h3>
+            <div class="body_chart-info">
+              <span class="negative_mark">Total Revenues</span>
+              <div class="stat big">1316</div>
+              <div class="info-sticker placeholder">
+                <p>Weekly Charge &amp; Profit <b>Coming Soon</b></p>
+              </div>
+            </div>
+            <div class="body_chart-content">
+              <svg style="height: 0" class="color-station">
+                <defs><linearGradient id="gradient-4" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0" /><stop offset="1" />
+                </linearGradient></defs>
+              </svg>
+              <div id="total-week-revenues" class="chart_content" style="min-width: 310px; height: 320px; margin: 0 auto"></div>
+            </div>
+            <style>
+            #gradient-4 stop {stop-color: #EEA100}
+            #total-week-revenues .highcharts-area {fill: url(#gradient-4)}
+            </style>
+            <script>
+            Highcharts.chart('total-week-revenues', {
+              chart: {type: 'area',spacing: [8, 15, 0, 20]},
+              navigation: {buttonOptions: {enabled: false,}},
+              credits: {enabled: false,},legend: {enabled: false,},
+              tooltip: {
+                enabled: true,
+                backgroundColor: 'rgba(0,0,0,0.8)',
+                borderWidth: 0,
+                borderRadius: 10,
+                style: { "color": "#ffffff", "fontSize": "24px" },
+                pointFormat: '{point.y}',
+                shadow: false,
+                useHTML: true
+              },
+              title: {text: ''},subtitle: {text: ''},
+              xAxis: {
+                categories: ['23/03/2017', '24/03/2017', '25/03/2017', '26/03/2017', '27/03/2017', '28/03/2017', '29/03/2017'],
+                tickmarkPlacement: 'on',
+                lineColor: "#EEA100",
+                tickColor: "#EEA100",
+                title: {
+                  enabled: false
+                }
+              },
+              yAxis: {title: {text: ''}},
+              plotOptions: {
+                area: {
+                  lineColor: '#EEA100',
+                  stacking: 'normal',lineWidth: 1,
+                  marker: {radius: 4,fillColor: '#ffffff',lineColor: '#EEA100',lineWidth: 2,}
+                }
+              },
+              series: [{
+                name: 'Total Week Revenues',
+                data: [50, 100, 60, 170, 110, 140, 100],
+                color: '#EEA100',
+                pointPlacement: "on",
+                fillColor: {
+                  stops: [
+                    [0, Highcharts.getOptions().colors[0]],
+                    [1, Highcharts.Color(Highcharts.getOptions().colors[0]).setOpacity(0).get('rgba')]
+                  ]
+                }
+              }]
+            });
+            </script>
+          </div></div>
+        </div>
+        <hr/>
+        <div class="body-heading text-center">
+          <h2 class="h2">These products are newest</h2>
+          <p>In the last 14 days</p>
+        </div>
+        <table class="block block-table">
+          <thead>
+            <td>Products</td>
+            <td style="width: 20%">Status</td>
+            <td style="width: 16%">Created at</td>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <div class="table-product">
+                  <div class="square-thumb small"><a href=""><img src="images/sp-thumb-1.jpg" alt=""></a></div>
+                  <p style="width: 90%">Bohemian Boho Printed Flower Choker Necklace for Women Fashion Steampunk Maxi Necklace Tattoo Jewelry collar Gifts N55231</p>
+                </div>
+              </td>
+              <td>
+                <div class="stat-text positive"><span></span> Pushed</div>
+              </td>
+              <td><span class="date">24/03/2017</span></td>
+            </tr>
+            <tr>
+              <td>
+                <div class="table-product">
+                  <div class="square-thumb small"><a href=""><img src="images/sp-thumb-2.jpg" alt=""></a></div>
+                  <p style="width: 90%">Bohemian Boho Printed Flower Choker Necklace for Women Fashion Steampunk Maxi Necklace Tattoo Jewelry collar Gifts N55231</p>
+                </div>
+              </td>
+              <td>
+                <div class="stat-text balanced"><span></span> Confirming</div>
+              </td>
+              <td><span class="date">24/03/2017</span></td>
+            </tr>
+            <tr>
+              <td>
+                <div class="table-product">
+                  <div class="square-thumb small"><a href=""><img src="images/sp-thumb-3.jpg" alt=""></a></div>
+                  <p style="width: 90%">Bohemian Boho Printed Flower Choker Necklace for Women Fashion Steampunk Maxi Necklace Tattoo Jewelry collar Gifts N55231</p>
+                </div>
+              </td>
+              <td>
+                <div class="stat-text negative"><span></span> Delete</div>
+              </td>
+              <td><span class="date">24/03/2017</span></td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="float-post post-block block">
+          <div class="post-thumb"><a href=""><img src="images/sp-big-thumb.jpg" alt=""></a></div>
+          <div class="post-info">
+            <h3 class="h5"><a href="">The Definitive Guide to Dropshipping with AliExpress</a></h3>
+            <p>Dropshipping with AliExpress is also very easy. There’s no upfront cost or fee, so you can test out products without any financial commitment. You can start dropshipping with AliExpress today …</p>
+            <a href="" class="read_more">Read more</a>
+          </div>
+        </div>
+        <hr/>
+        <div class="body-heading text-center">
+          <h2 class="h2">Why Upinus truly satisfies you?</h2>
+        </div>
+        <div class="clearfix">
+          <div class="col-3">
+            <div class="block label-block text-center">
+              <div class="label-block-icon"><img src="images/feature-icon-1.svg" alt=""></div>
+              <div class="label-block-title"><span class="single-star"></span> Free Use</div>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="block label-block text-center">
+              <div class="label-block-icon"><img src="images/feature-icon-2.svg" alt=""></div>
+              <div class="label-block-title"><span class="single-star"></span> No Extra Fee</div>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="block label-block text-center">
+              <div class="label-block-icon"><img src="images/feature-icon-3.svg" alt=""></div>
+              <div class="label-block-title"><span class="single-star"></span> Unlimited Product Import</div>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="block label-block text-center">
+              <div class="label-block-icon"><img src="images/feature-icon-4.svg" alt=""></div>
+              <div class="label-block-title"><span class="single-star"></span> Unlimited Order Fulfillment</div>
+            </div>
+          </div>
+        </div>
+        <table class="block block-table">
+          <thead>
+            <td colspan="2"><span class="big">Please Rate us or Give us your feedback <a href="javascript:;" class="refresh main-color"></a></span></td>
+            <td style="width: 60px"></td>
+            <td class="text-right" style="width: 150px"><b>Total</b> <span>2373</span> <span class="lighter">votes</span></td>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="width: 260px">
+                <a href="javascript:;" class="table-vote positive"><div class="table-row-icon small"><img src="images/mood-face-positive.svg" alt=""></div><span>The product is awesome</span></a>
+              </td>
+              <td><div class="table-row-progress positive"><span style="width: 76%"></span></div></td>
+              <td><b>76%</b></td>
+              <td class="text-right">1750 votes</td>
+            </tr>
+            <tr>
+              <td style="width: 260px">
+                <a href="javascript:;" class="table-vote good"><div class="table-row-icon small"><img src="images/mood-face-good.svg" alt=""></div><span>Yeah! I’m satisfied with it</span></a>
+              </td>
+              <td><div class="table-row-progress good"><span style="width: 14%"></span></div></td>
+              <td><b>14%</b></td>
+              <td class="text-right">425 votes</td>
+            </tr>
+            <tr>
+              <td style="width: 260px">
+                <a href="javascript:;" class="table-vote average"><div class="table-row-icon small"><img src="images/mood-face-average.svg" alt=""></div><span>Average, not bad</span></a>
+              </td>
+              <td><div class="table-row-progress average"><span style="width: 8%"></span></div></td>
+              <td><b>8%</b></td>
+              <td class="text-right">198 votes</td>
+            </tr>
+            <tr>
+              <td style="width: 260px">
+                <a href="javascript:;" class="table-vote negative"><div class="table-row-icon small"><img src="images/mood-face-negative.svg" alt=""></div><span>Not useful at all. It sucks</span></a>
+              </td>
+              <td><div class="table-row-progress negative"><span style="width: 0%"></span></div></td>
+              <td><b>0%</b></td>
+              <td class="text-right">0 votes</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div class="block padded block-popup narrow heavypadded text-center" id="platform-review">
+    <a href="javascript:;" class="close-popup"><img src="images/close-p.svg" alt=""></a>
+    <h2 class="h3 block-title uppercase">Keep Upinus Free Forever</h2>
+    <img src="images/stars-line.svg" alt="" class="divided-img">
+    <p class="para h6">If you like Upinus , please kindly leave us a <b>5-star review</b></p>
+    <p class="para h6">Your review will motivate us to work harder, create more powerful features, and keep this app <b>FREE FOREVER</b> for you.</p>
+    <div class="product-images-actions clearfix">
+      <a href="javascript:;" class="btn wide end-popup">Write a Quick Review</a>
+      <div><a href="" class="low-end text-color end-popup">I already wrote a Review</a></div>
+    </div>
+  </div>
+  <div class="overlayer"></div>
+</div>
+<script>w3IncludeHTML();</script>
+<script type="text/javascript" src="js/scripts.js"></script>
+</body>
+</html>

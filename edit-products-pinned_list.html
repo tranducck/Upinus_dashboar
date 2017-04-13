@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+  <title>Main Dashboard | Upinus</title>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Roboto:300,400,700&amp;subset=vietnamese" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/fonts.css" media="all"/>
+  <link rel="stylesheet" href="css/grid.css"/>
+  <link rel="stylesheet" href="css/zebra_datepicker.css" type="text/css">
+  <link rel="stylesheet" href="css/style.css"/>
+  <script type="text/javascript" src="js/w3data.js"></script>
+  <script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+  <script type="text/javascript" src="js/tinymce.min.js"></script>
+</head>
+<body>
+<div id="body">
+  <input type="checkbox" id="sidebar_toggler" class="nodis"/>
+  <div id="side_nav" w3-include-html="sidebar.html"></div>
+  <div id="main_content">
+    <div id="body_nav">
+      <div class="wrap cols body_nav-wrap clearfix">
+        <div class="col-12 centered-col">
+          <div class="body_nav-actions float-left">
+            <label for="sidebar_toggler" class="side_nav-toggle svg-icon"><img src="images/sidebar-toggle.svg" alt=""></label>
+            <ul class="body_nav-breadcrumbs">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="products-my_products.html">Products</a></li>
+              <li><a href="products-pinned_list.html">Pinned List</a></li>
+              <li><a href="empty-products-pinned_list.html">Edit Pinned Item</a></li>
+            </ul>
+          </div>
+          <div class="body_nav-actions float-right">
+            <ul class="body_nav-action-menu">
+              <li><a href="">Go to AliExpress</a></li>
+              <li><a href="">Go to Your Shop</a></li>
+              <li>
+                <a href="" class="icon svg-icon setting_menu_trigger"><img src="images/menu/nav-setting.svg" alt=""></a>
+                <div class="body_nav-drop_menu setting_menu">
+                  <ul class="body_nav-drop_menu-list">
+                    <li><a href="settings.html"> &nbsp;Settings</a></li>
+                    <li><a href=""> &nbsp;Log out</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a href="" class="icon svg-icon body_nav-notificator has_noti"><img src="images/menu/nav-notification.svg" alt=""></a>
+                <div class="body_nav-drop_menu notification_menu">
+                  <div class="notification_menu-content"><p class="empty">You don’t have any notifications</p></div>
+                  <div class="notification_menu-actions"><a href="">View all notification</a></div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="wrap cols">
+      <div class="col-9">
+        <h1 class="h3 page-title">Product Editor</h1>
+        <div class="block padded">
+          <h3 class="h5 block-title">Product Title</h3>
+          <div class="input-wrap big blocker">
+            <input type="text" class="input" value="BAMOER Leather Cuff Double Wide Bracelet and Rope Bangles Brown for Men Fashion Man Bracelet Unisex Jewelry PI0296">
+          </div>
+        </div>
+        <div class="product-image-manage clearfix">
+          <div class="col-3">
+            <div class="block padded" style="min-height: calc(15.5vw + 124px)">
+              <h3 class="h5 block-title">Product Thumbnail</h3>
+              <div class="product-image-thumb">
+                <a href="" class="product-image-thumbnail start-popup" context=" &nbsp;Click to Change" popup-target="all-product-thumb"><img src="images/products/pi-thumb.jpg" alt=""></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="block padded">
+              <h3 class="h5 block-title">Product Images</h3>
+              <div class="product-images-wrap">
+                <a href="" class="product-single-image"><img src="images/products/pi-1.jpg" alt=""></a>
+                <a href="" class="product-single-image"><img src="images/products/pi-2.jpg" alt=""></a>
+                <a href="" class="product-single-image"><img src="images/products/pi-3.jpg" alt=""></a>
+                <a href="" class="product-single-image"><img src="images/products/pi-4.jpg" alt=""></a>
+                <a href="" class="product-single-image"><img src="images/products/pi-3.jpg" alt=""></a>
+                <a href="" class="product-single-image"><img src="images/products/pi-4.jpg" alt=""></a>
+                <a href="" class="product-single-image"><img src="images/products/pi-1.jpg" alt=""></a>
+                <a href="" class="product-single-image"><img src="images/products/pi-2.jpg" alt=""></a>
+              </div>
+              <div class="product-images-actions clearfix">
+                Total: <b><span class="main-color">13</span> Image (s)</b>
+                <a href="javascript:;" class="btn float-right start-popup" popup-target="all-product-images">Change Images</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="product-description">
+          <div class="product-description-tabs">
+            <a href="javscript:;" tab-target="product-description-editor-tab" class="tab-btn active">Details</a>
+            <a href="javscript:;" tab-target="product-description-info-tab" class="tab-btn">Shipping info</a>
+            <a href="javscript:;" tab-target="product-description-variant-tab" class="tab-btn">Variants <span class="tab-counts">2</span></a>
+          </div>
+          <div class="block product-description-tab product-description-editor active" id="product-description-editor-tab">
+            <textarea id="product-description-editor">
+              <p style="text-align: center;">
+                <img title="TinyMCE Logo" src="//www.tinymce.com/images/glyph-tinymce@2x.png" alt="TinyMCE Logo" width="110" height="97" />
+              </p>
+            
+              <h1 style="text-align: center;">Welcome to the TinyMCE editor demo!</h1>
+            
+              <p>
+                Please try out the features provided in this basic example.<br>
+                Note that any <strong>MoxieManager</strong> file and image management functionality in this example is part of our commercial offering – the demo is to show the integration.
+              </p>
+            
+              <h2>Got questions or need help?</h2>
+            
+              <ul>
+                <li>Our <a href="http://www.tinymce.com/docs/">documentation</a> is a great resource for learning how to configure TinyMCE.</li>
+                <li>Have a specific question? Visit the <a href="http://community.tinymce.com/forum/" target="_blank">Community Forum</a>.</li>
+                <li>We also offer enterprise grade support as part of <a href="www.tinymce.com/pricing">TinyMCE Enterprise</a>.</li>
+              </ul>
+            
+              <h2>A simple table to play with</h2>
+            
+              <table style="text-align: center;">
+                <thead>
+                  <tr>
+                    <th>Product</th>
+                    <th>Cost</th>
+                    <th>Really?</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>TinyMCE</td>
+                    <td>Free</td>
+                    <td>YES!</td>
+                  </tr>
+                  <tr>
+                    <td>Plupload</td>
+                    <td>Free</td>
+                    <td>YES!</td>
+                  </tr>
+                </tbody>
+              </table>
+            
+              <h2>Found a bug?</h2>
+            
+              <p>
+                If you think you have found a bug please create an issue on the <a href="https://github.com/tinymce/tinymce/issues">GitHub repo</a> to report it to the developers.
+              </p>
+            
+              <h2>Finally ...</h2>
+            
+              <p>
+                Don't forget to check out our other product <a href="http://www.plupload.com" target="_blank">Plupload</a>, your ultimate upload solution featuring HTML5 upload support.
+              </p>
+              <p>
+                Thanks for supporting TinyMCE! We hope it helps you and your users create great content.<br>All the best from the TinyMCE team.
+              </p>
+            </textarea>
+          </div>
+          <div class="block product-description-tab product-description-info padded" id="product-description-info-tab">
+            <div>
+              <span>View Shipping Cost through Country &nbsp;</span>
+              <div class="input-wrap big lspaced">
+                <select name="" id="" class="input" required>
+                  <option value="" default disabled selected>Choose Country</option>
+                  <option value="1">Vietnam</option>
+                  <option value="2">United States</option>
+                  <option value="3">United Kingdom</option>
+                  <option value="4">Australia</option>
+                  <option value="5">Sweden</option>
+                </select>
+              </div>  
+            </div>
+            <table class="inner-table">
+              <thead>
+                <td>Shipping Company</td>
+                <td>Estimated Delivery Time</td>
+                <td>Shipping Cost</td>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>UPS</td>
+                  <td>5 — 9 days</td>
+                  <td>$ 0</td>
+                </tr>
+                <tr>
+                  <td>USPS</td>
+                  <td>4 — 13 days</td>
+                  <td>$ 0</td>
+                </tr>
+                <tr>
+                  <td>DHL</td>
+                  <td>6 — 13 days</td>
+                  <td>$ 0</td>
+                </tr>
+                <tr>
+                  <td>Fedex</td>
+                  <td>8 — 16 days</td>
+                  <td>$ 0</td>
+                </tr>
+                <tr>
+                  <td>Seller’s Shipping Method</td>
+                  <td>2 — 6 days</td>
+                  <td>$ 59</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <table class="block block-table product-description-tab product-description-variant" id="product-description-variant-tab">
+            <thead>
+              <td class="select-box"><a href="" class="select-all-row" check-target="product-check"><span class="tooltip">Check all</span></a></td>
+              <td>Image</td>
+              <td class="input-col">SKU</td>
+              <td class="input-col">Bundle <a href="javascript:;" class="help-icon"><span class="tooltip">Want to change all value of one kind of properties? Just change one of them</span></a></td>
+              <td class="input-col">Color <a href="javascript:;" class="help-icon"><span class="tooltip">Want to change all value of one kind of properties? Just change one of them</span></a></td>
+              <td class="input-col">Price &nbsp;<div class="change_value_wrapper">
+                <a href="javascript:;" class="change_price_trigger small inliner">Change All </a><div class="change-price-options">
+                  <ul>
+                    <li><a href="" class="start-popup" popup-target="product-pricer">Set value</a></li>
+                    <li><a href="" class="start-popup" popup-target="product-pricer">Multiple by</a></li>
+                  </ul>
+                </div>
+              </div></td>
+              <td class="input-col">Compared at &nbsp;<div class="change_value_wrapper">
+                <a href="javascript:;" class="change_price_trigger small inliner">Change All </a><div class="change-price-options">
+                  <ul>
+                    <li><a href="" class="start-popup" popup-target="product-pricer">Set value</a></li>
+                    <li><a href="" class="start-popup" popup-target="product-pricer">Multiple by</a></li>
+                  </ul>
+                </div>
+              </div></td>
+              <td class="input-col">Inventory</td>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="select-box"><label class="checkbox-wrap"><input type="checkbox" class="nodis table-row-select" check-label="product-check"><span class="checkbox"></span></label></td>
+                <td class="product-variant-thumb"><img src="images/products/vr-1.jpg" alt=""></td>
+                <td class="input-col">
+                  <div class="input-wrap blocker"><input type="text" class="input" value="201336100"></div>
+                </td>
+                <td class="input-col">
+                  <div class="input-wrap blocker"><input type="text" class="input" value="Featured Phones"></div>
+                </td>
+                <td class="input-col">
+                  <div class="input-wrap blocker"><input type="text" class="input" value="Blue"></div>
+                </td>
+                <td class="input-col">
+                  <div class="input-wrap blocker"><input type="text" class="input" value="58.79" pattern="[0-9]*"></div>
+                </td>
+                <td class="input-col">
+                  <div class="input-wrap blocker"><input type="text" class="input" value="0" value="58.79" pattern="[0-9]*"></div>
+                </td>
+                <td class="input-col">
+                  <div class="input-wrap blocker"><input type="text" class="input" value="89" value="58.79" pattern="[0-9]*"></div>
+                </td>
+              </tr>
+              <tr>
+                <td class="select-box"><label class="checkbox-wrap"><input type="checkbox" class="nodis table-row-select" check-label="product-check"><span class="checkbox"></span></label></td>
+                <td class="product-variant-thumb"><img src="images/products/vr-1.jpg" alt=""></td>
+                <td class="input-col">
+                  <div class="input-wrap blocker"><input type="text" class="input" value="201336100"></div>
+                </td>
+                <td class="input-col">
+                  <div class="input-wrap blocker"><input type="text" class="input" value="Featured Phones"></div>
+                </td>
+                <td class="input-col">
+                  <div class="input-wrap blocker"><input type="text" class="input" value="Blue"></div>
+                </td>
+                <td class="input-col">
+                  <div class="input-wrap blocker"><input type="text" class="input" value="58.79" pattern="[0-9]*"></div>
+                </td>
+                <td class="input-col">
+                  <div class="input-wrap blocker"><input type="text" class="input" value="0" value="58.79" pattern="[0-9]*"></div>
+                </td>
+                <td class="input-col">
+                  <div class="input-wrap blocker"><input type="text" class="input" value="89" value="58.79" pattern="[0-9]*"></div>
+                </td>
+              </tr>
+              <tr>
+                <td class="select-box"><label class="checkbox-wrap"><input type="checkbox" class="nodis table-row-select" check-label="product-check"><span class="checkbox"></span></label></td>
+                <td class="product-variant-thumb"><img src="images/products/vr-1.jpg" alt=""></td>
+                <td class="input-col">
+                  <div class="input-wrap blocker"><input type="text" class="input" value="201336100"></div>
+                </td>
+                <td class="input-col">
+                  <div class="input-wrap blocker"><input type="text" class="input" value="Featured Phones"></div>
+                </td>
+                <td class="input-col">
+                  <div class="input-wrap blocker"><input type="text" class="input" value="Blue"></div>
+                </td>
+                <td class="input-col">
+                  <div class="input-wrap blocker"><input type="text" class="input" value="58.79" pattern="[0-9]*"></div>
+                </td>
+                <td class="input-col">
+                  <div class="input-wrap blocker"><input type="text" class="input" value="0" value="58.79" pattern="[0-9]*"></div>
+                </td>
+                <td class="input-col">
+                  <div class="input-wrap blocker"><input type="text" class="input" value="89" value="58.79" pattern="[0-9]*"></div>
+                </td>
+              </tr>
+              <tr>
+                <td class="select-box"><label class="checkbox-wrap"><input type="checkbox" class="nodis table-row-select" check-label="product-check"><span class="checkbox"></span></label></td>
+                <td class="product-variant-thumb"><img src="images/products/vr-1.jpg" alt=""></td>
+                <td class="input-col">
+                  <div class="input-wrap blocker"><input type="text" class="input" value="201336100"></div>
+                </td>
+                <td class="input-col">
+                  <div class="input-wrap blocker"><input type="text" class="input" value="Featured Phones"></div>
+                </td>
+                <td class="input-col">
+                  <div class="input-wrap blocker"><input type="text" class="input" value="Blue"></div>
+                </td>
+                <td class="input-col">
+                  <div class="input-wrap blocker"><input type="text" class="input" value="58.79" pattern="[0-9]*"></div>
+                </td>
+                <td class="input-col">
+                  <div class="input-wrap blocker"><input type="text" class="input" value="0" value="58.79" pattern="[0-9]*"></div>
+                </td>
+                <td class="input-col">
+                  <div class="input-wrap blocker"><input type="text" class="input" value="89" value="58.79" pattern="[0-9]*"></div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="col-3">
+        <h2 class="h3 page-title">&nbsp;</h2>
+        <div class="block padded">
+          <h3 class="h5 block-title">Product Type</h3>
+          <div class="input-wrap big blocker">
+            <input type="text" id="pinned_product_type" class="input auto_complete_input">
+            <div class="auto_complete_data" data-value="pinned_product_type" empty-placeholder="Enter product Type, such as &quot;T-Shirt&quot;">
+              <span>Men's Wear</span>
+              <span>Women's Wear</span>
+              <span>Flash Light</span>
+              <span>Cable</span>
+              <span>Coat</span>
+              <span>Mobile</span>
+              <span>Laptop</span>
+            </div>
+          </div>
+          <h3 class="h5 block-title">Collections</h3>
+          <div class="input-wrap big blocker">
+            <div class="auto_complete_placeholder"></div>
+            <input type="text" id="pinned_product_collection" class="input auto_complete_input auto_complete_placing">
+            <div class="auto_complete_data auto_complete_data_placing" data-value="pinned_product_collection" empty-placeholder="No collection found">
+              <span>Jacket</span>
+              <span>Denim</span>
+              <span>Jeans</span>
+              <span>Coat</span>
+              <span>Dark</span>
+            </div>
+          </div>
+          <h3 class="h5 block-title">Tags</h3>
+          <div class="input-wrap big blocker">
+            <div class="auto_complete_placeholder"></div>
+            <input type="text" id="pinned_product_tags" class="input auto_complete_input auto_complete_placing ac_tag_input">
+            <div class="auto_complete_data auto_complete_data_placing ac_type_tag" data-value="pinned_product_tags" empty-placeholder="Add new tag by press Enter or Comma">
+              <span selected>jacket</span>
+              <span>denim</span>
+              <span selected>jeans</span>
+              <span>coat</span>
+              <span>dark</span>
+            </div>
+          </div>
+        </div>
+        <div class="block placeholder inblock">
+          <div class="placeholder-boat">
+            <img src="images/price-swap.svg" alt="">
+            <p>Price Change Feature</p>
+            <b>Coming Soon</b>
+          </div>
+        </div>
+      </div>
+      <div class="table_actions_menu active">
+        <div class="table_actions"></div>
+        <div class="table_actions text-right">
+          <a href="" class="btn outline main-color wide spaced">Save Changes</a>
+          <a href="" class="btn main-color spaced trigger-push">Push to Shopify</a>
+          <div class="push-status"><img src="images/push-sc.svg" alt=""> Push Successfully</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="block padded block-popup product-images-selector" id="all-product-images">
+    <a href="javascript:;" class="close-popup"><img src="images/close-p.svg" alt=""></a>
+    <h2 class="h3 block-title">Select Images</h2>
+    <p class="block-desc">Choose images to show on your shop</p>
+    <div class="product-images-wrap">
+      <label class="product-single-image psi-select"><input type="checkbox" class="nodis" check-label="ps-image"><img src="images/products/pi-1.jpg" alt=""><span class="psi-grab"></span><a href="#" class="psi-preview"> view image</a></label>
+      <label class="product-single-image psi-select"><input type="checkbox" class="nodis" check-label="ps-image"><img src="images/products/pi-2.jpg" alt=""><span class="psi-grab"></span><a href="#" class="psi-preview"> view image</a></label>
+      <label class="product-single-image psi-select"><input type="checkbox" class="nodis" check-label="ps-image"><img src="images/products/pi-3.jpg" alt=""><span class="psi-grab"></span><a href="#" class="psi-preview"> view image</a></label>
+      <label class="product-single-image psi-select"><input type="checkbox" class="nodis" check-label="ps-image"><img src="images/products/pi-4.jpg" alt=""><span class="psi-grab"></span><a href="#" class="psi-preview"> view image</a></label>
+      <label class="product-single-image psi-select"><input type="checkbox" class="nodis" check-label="ps-image"><img src="images/products/pi-3.jpg" alt=""><span class="psi-grab"></span><a href="#" class="psi-preview"> view image</a></label>
+      <label class="product-single-image psi-select"><input type="checkbox" class="nodis" check-label="ps-image"><img src="images/products/pi-4.jpg" alt=""><span class="psi-grab"></span><a href="#" class="psi-preview"> view image</a></label>
+      <label class="product-single-image psi-select"><input type="checkbox" class="nodis" check-label="ps-image"><img src="images/products/pi-1.jpg" alt=""><span class="psi-grab"></span><a href="#" class="psi-preview"> view image</a></label>
+      <label class="product-single-image psi-select"><input type="checkbox" class="nodis" check-label="ps-image"><img src="images/products/pi-2.jpg" alt=""><span class="psi-grab"></span><a href="#" class="psi-preview"> view image</a></label>
+    </div>
+    <div class="product-images-actions clearfix">
+      <a href="" class="select-all-row" check-target="ps-image"><span class="tooltip">Check all</span></a>
+      <span class="table-selected_number main-color" check-counter="ps-image">0</span> <b>image(s)</b> selected
+      <a href="javascript:;" class="btn float-right end-popup">Save Change</a>
+    </div>
+  </div>
+  <div class="block padded block-popup product-images-selector" id="all-product-thumb">
+    <a href="javascript:;" class="close-popup"><img src="images/close-p.svg" alt=""></a>
+    <h2 class="h3 block-title">Change Thumbnail Image</h2>
+    <p class="block-desc">Choose images show as thumbnail of your product</p>
+    <div class="product-images-wrap">
+      <label class="product-single-image psi-select"><input type="radio" name="psi-thumbnail" class="nodis"><img src="images/products/pi-1.jpg" alt=""><span class="psi-grab"></span><a href="#" class="psi-preview"> view image</a></label>
+      <label class="product-single-image psi-select"><input type="radio" name="psi-thumbnail" class="nodis"><img src="images/products/pi-2.jpg" alt=""><span class="psi-grab"></span><a href="#" class="psi-preview"> view image</a></label>
+      <label class="product-single-image psi-select"><input type="radio" name="psi-thumbnail" class="nodis"><img src="images/products/pi-3.jpg" alt=""><span class="psi-grab"></span><a href="#" class="psi-preview"> view image</a></label>
+      <label class="product-single-image psi-select"><input type="radio" name="psi-thumbnail" class="nodis"><img src="images/products/pi-4.jpg" alt=""><span class="psi-grab"></span><a href="#" class="psi-preview"> view image</a></label>
+      <label class="product-single-image psi-select"><input type="radio" name="psi-thumbnail" class="nodis"><img src="images/products/pi-3.jpg" alt=""><span class="psi-grab"></span><a href="#" class="psi-preview"> view image</a></label>
+      <label class="product-single-image psi-select"><input type="radio" name="psi-thumbnail" class="nodis"><img src="images/products/pi-4.jpg" alt=""><span class="psi-grab"></span><a href="#" class="psi-preview"> view image</a></label>
+      <label class="product-single-image psi-select"><input type="radio" name="psi-thumbnail" class="nodis"><img src="images/products/pi-1.jpg" alt=""><span class="psi-grab"></span><a href="#" class="psi-preview"> view image</a></label>
+      <label class="product-single-image psi-select"><input type="radio" name="psi-thumbnail" class="nodis"><img src="images/products/pi-2.jpg" alt=""><span class="psi-grab"></span><a href="#" class="psi-preview"> view image</a></label>
+    </div>
+    <div class="product-images-actions clearfix">
+      <a href="javascript:;" class="btn float-right end-popup">Save Change</a>
+    </div>
+  </div>
+  <div class="block padded block-popup narrow" id="product-pricer">
+    <a href="javascript:;" class="close-popup"><img src="images/close-p.svg" alt=""></a>
+    <h2 class="h3 block-title heavy-title">Change Price</h2>
+    <label for="all_price" class="input-block_label">Price</label>
+    <div class="input-wrap big blocker">
+      <input type="text" id="all_price" class="input" value="58.79" pattern="[0-9]*"/>
+    </div>
+    <label for="all_compare" class="input-block_label">Compare at Price</label>
+    <div class="input-wrap big blocker">
+      <input type="text" id="all_compare" class="input" value="0" pattern="[0-9]*"/>
+    </div>
+    <div class="product-images-actions clearfix">
+      <a href="javascript:;" class="btn float-right end-popup">Save Change</a>
+    </div>
+  </div>
+  <div class="block padded block-popup narrow heavypadded text-center" id="platform-review">
+    <a href="javascript:;" class="close-popup"><img src="images/close-p.svg" alt=""></a>
+    <h2 class="h3 block-title uppercase">Keep Upinus Free Forever</h2>
+    <img src="images/stars-line.svg" alt="" class="divided-img">
+    <p class="para h6">If you like Upinus , please kindly leave us a <b>5-star review</b></p>
+    <p class="para h6">Your review will motivate us to work harder, create more powerful features, and keep this app <b>FREE FOREVER</b> for you.</p>
+    <div class="product-images-actions clearfix">
+      <a href="javascript:;" class="btn wide end-popup">Write a Quick Review</a>
+      <div><a href="" class="low-end text-color end-popup">I already wrote a Review</a></div>
+    </div>
+  </div>
+  <div class="overlayer"></div>
+</div>
+<script>w3IncludeHTML();</script>
+<script>
+tinymce.init({
+  selector: '#product-description-editor',
+  height: 500,
+  menubar: true,
+  plugins: [
+    'advlist autolink lists link image charmap print preview anchor',
+    'searchreplace visualblocks code fullscreen',
+    'insertdatetime media table contextmenu paste code'
+  ],
+  toolbar: 'undo redo | insert | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image',
+  content_css: '//www.tinymce.com/css/codepen.min.css'
+});
+</script>
+<script type="text/javascript" src="js/scripts.js"></script>
+</body>
+</html>

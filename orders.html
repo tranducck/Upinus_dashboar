@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+  <title>Main Dashboard | Upinus</title>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Roboto:300,400,700&amp;subset=vietnamese" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/fonts.css" media="all"/>
+  <link rel="stylesheet" href="css/grid.css"/>
+  <link rel="stylesheet" href="css/zebra_datepicker.css" type="text/css">
+  <link rel="stylesheet" href="css/style.css"/>
+  <script type="text/javascript" src="js/w3data.js"></script>
+  <script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+  <script type="text/javascript" src="js/highcharts.js"></script>
+  <script type="text/javascript" src="js/exporting.js"></script>
+  <script type="text/javascript" src="js/zebra_datepicker.js"></script>
+</head>
+<body>
+<div id="body">
+  <input type="checkbox" id="sidebar_toggler" class="nodis"/>
+  <div id="side_nav" w3-include-html="sidebar.html"></div>
+  <div id="main_content">
+    <div id="body_nav">
+      <div class="wrap cols body_nav-wrap clearfix">
+        <div class="col-12 centered-col">
+          <div class="body_nav-actions float-left">
+            <label for="sidebar_toggler" class="side_nav-toggle svg-icon"><img src="images/sidebar-toggle.svg" alt=""></label>
+            <ul class="body_nav-breadcrumbs">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="products.html">Products</a></li>
+              <li><a href="products-my_products.html">My Products</a></li>
+            </ul>
+          </div>
+          <div class="body_nav-actions float-right">
+            <ul class="body_nav-action-menu">
+              <li><a href="">Go to AliExpress</a></li>
+              <li><a href="">Go to Your Shop</a></li>
+              <li>
+                <a href="" class="icon svg-icon setting_menu_trigger"><img src="images/menu/nav-setting.svg" alt=""></a>
+                <div class="body_nav-drop_menu setting_menu">
+                  <ul class="body_nav-drop_menu-list">
+                    <li><a href="settings.html"> &nbsp;Settings</a></li>
+                    <li><a href=""> &nbsp;Log out</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a href="" class="icon svg-icon body_nav-notificator has_noti"><img src="images/menu/nav-notification.svg" alt=""></a>
+                <div class="body_nav-drop_menu notification_menu">
+                  <div class="notification_menu-content"><p class="empty">You don’t have any notifications</p></div>
+                  <div class="notification_menu-actions"><a href="">View all notification</a></div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="wrap cols">
+      <div class="col-12 centered-col">
+        <div class="head_table-actions">
+          <form class="head_table-left_actions">
+            <div class="input-wrap big rspaced">
+              <select name="" id="" class="input" required>
+                <option value="" default disabled selected>Select Status</option>
+                <option value="1">In Processing</option>
+                <option value="2">Shipping</option>
+                <option value="3">Done</option>
+                <option value="4">Refunded</option>
+                <option value="5">To Order</option>
+                <option value="6">Deleted</option>
+              </select>
+            </div>
+            <div class="input-wrap big spaced">
+              <label for="datepicker" class="icon_label datepicker divided"></label>
+              <input type="text" id="datepicker" class="input datepicker" placeholder="Choose date" required>
+            </div>
+            <button class="btn big spaced"> &nbsp; Filter</button>
+          </form>
+        </div>
+        <table class="block block-table">
+          <thead>
+            <td>Order</td>
+            <td>Date</td>
+            <td>Customer</td>
+            <td>Order Status</td>
+            <td>Fulfillment Status</td>
+            <td class="text-right">Total</td>
+          </thead>
+          <tbody>
+            <tr class="parent_row">
+              <td><a href="">#0001</a></td>
+              <td>Thu, 09 Mar 2017</td>
+              <td class="hover_card_wrap">
+                Mina Ryan
+              <div class="hover_card"><table><tbody>
+                  <tr><td>Name</td><td>Mina Ryan</td></tr>
+                  <tr><td>Email</td><td>minaryan@gmail.com</td></tr>
+                  <tr><td>Total Spent</td><td>$3453.35</td></tr>
+                  <tr><td>Last Order</td><td>#1084</td></tr>
+                </tbody></table></div>
+              </td>
+              <td><div class="stat-text average"><span></span> In Processing</div></td>
+              <td><span class="stat-text negative">Unfulfilled</span></td>
+              <td class="text-right">$460</td>
+            </tr>
+            <tr class="child_row">
+              <td>
+                <div class="order_thumb">
+                  <a href="#"><img src="images/order_thumb.jpg" alt=""></a>
+                  <span class="order_stat average">In Process</span>
+                </div>
+              </td>
+              <td colspan="2">
+                <div class="order_context">
+                  <div class="order_number"><small><img src="images/order_ico/1.png" width="16"/> Ali Order No: <a href="#">Add</a></small></div>
+                  <a href="" class="order_permalink"><b>17KM Fashion Turquoise Necklaces for Women Multi Layer Leaf...</b></a>
+                  <div class="order_id">NJCS132</div>
+                </div>
+              </td>
+              <td><div class="order_context">Stand Packing</div></td>
+              <td><div class="order_context">No Tracking Number</div></td>
+              <td class="text-right"><div class="order_context">3 &nbsp; × &nbsp; <span>$245</span></div><a href="" class="add_to_cart_order"> <span class="tooltip leftside">Click to Order</span></a></td>
+            </tr>
+            <tr class="parent_row">
+              <td><a href="">#0002</a></td>
+              <td>Wed, 11 Oct 2017</td>
+              <td class="hover_card_wrap">
+                Georgie Patterson
+                <div class="hover_card"><table><tbody>
+                  <tr><td>Name</td><td>Georgie Patterson</td></tr>
+                  <tr><td>Email</td><td>geopatt@gmail.com</td></tr>
+                  <tr><td>Total Spent</td><td>$3453.35</td></tr>
+                  <tr><td>Last Order</td><td>#1084</td></tr>
+                </tbody></table></div>
+              </td>
+              <td><div class="stat-text balanced"><span></span> Shipping</div></td>
+              <td><span class="stat-text positive">Fulfilled</span></td>
+              <td class="text-right">$460</td>
+            </tr>
+            <tr class="child_row">
+              <td>
+                <div class="order_thumb">
+                  <a href="#"><img src="images/order_thumb.jpg" alt=""></a>
+                  <span class="order_stat balanced">Shipping</span>
+                </div>
+              </td>
+              <td colspan="2">
+                <div class="order_context">
+                  <div class="order_number"><small><img src="images/order_ico/1.png" width="16"/> Ali Order No: <a href="#">Add</a></small></div>
+                  <a href="" class="order_permalink"><b>17KM Fashion Turquoise Necklaces for Women Multi Layer Leaf...</b></a>
+                  <div class="order_id">NJCS132</div>
+                </div>
+              </td>
+              <td><div class="order_context">Stand Packing</div></td>
+              <td><div class="order_context">No Tracking Number</div></td>
+              <td class="text-right"><div class="order_context">3 &nbsp; × &nbsp; <span>$245</span></div></td>
+            </tr>
+            <tr class="parent_row">
+              <td><a href="">#0003</a></td>
+              <td>Tue, 25 Apr 2017</td>
+              <td class="hover_card_wrap">
+                Ina Norton
+                <div class="hover_card"><table><tbody>
+                  <tr><td>Name</td><td>Ina Norton</td></tr>
+                  <tr><td>Email</td><td>inanorton@gmail.com</td></tr>
+                  <tr><td>Total Spent</td><td>$3453.35</td></tr>
+                  <tr><td>Last Order</td><td>#1084</td></tr>
+                </tbody></table></div>
+              </td>
+              <td><div class="stat-text positive"><span></span> Done</div></td>
+              <td><span class="stat-text positive">Fulfilled</span></td>
+              <td class="text-right">$460</td>
+            </tr>
+            <tr class="child_row">
+              <td>
+                <div class="order_thumb">
+                  <a href="#"><img src="images/order_thumb.jpg" alt=""></a>
+                  <span class="order_stat positive">Done</span>
+                </div>
+              </td>
+              <td colspan="2">
+                <div class="order_context">
+                  <div class="order_number"><small><img src="images/order_ico/1.png" width="16"/> Ali Order No: <a href="#">Add</a></small></div>
+                  <a href="" class="order_permalink"><b>17KM Fashion Turquoise Necklaces for Women Multi Layer Leaf...</b></a>
+                  <div class="order_id">NJCS132</div>
+                </div>
+              </td>
+              <td><div class="order_context">Stand Packing</div></td>
+              <td><div class="order_context">No Tracking Number</div></td>
+              <td class="text-right"><div class="order_context">3 &nbsp; × &nbsp; <span>$245</span></div></td>
+            </tr>
+            <tr class="parent_row">
+              <td><a href="">#0004</a></td>
+              <td>Thu, 09 Mar 2017</td>
+              <td class="hover_card_wrap">
+                Ora Lamb
+                <div class="hover_card"><table><tbody>
+                  <tr><td>Name</td><td>Ora Lamb</td></tr>
+                  <tr><td>Email</td><td>oralamb@gmail.com</td></tr>
+                  <tr><td>Total Spent</td><td>$3453.35</td></tr>
+                  <tr><td>Last Order</td><td>#1084</td></tr>
+                </tbody></table></div>
+              </td>
+              <td><div class="stat-text average"><span></span> In Processing</div></td>
+              <td><span class="stat-text negative">Unfulfilled</span></td>
+              <td class="text-right">$460</td>
+            </tr>
+            <tr class="child_row">
+              <td>
+                <div class="order_thumb">
+                  <a href="#"><img src="images/order_thumb.jpg" alt=""></a>
+                  <span class="order_stat average">In Process</span>
+                </div>
+              </td>
+              <td colspan="2">
+                <div class="order_context">
+                  <div class="order_number"><small><img src="images/order_ico/1.png" width="16"/> Ali Order No: <a href="#">Add</a></small></div>
+                  <a href="" class="order_permalink"><b>17KM Fashion Turquoise Necklaces for Women Multi Layer Leaf...</b></a>
+                  <div class="order_id">NJCS132</div>
+                </div>
+              </td>
+              <td><div class="order_context">Stand Packing</div></td>
+              <td><div class="order_context">No Tracking Number</div></td>
+              <td class="text-right"><div class="order_context">3 &nbsp; × &nbsp; <span>$245</span></div><a href="" class="add_to_cart_order"> <span class="tooltip leftside">Click to Order</span></a></td>
+            </tr>
+            <tr class="parent_row">
+              <td><a href="">#0005</a></td>
+              <td>Mon, 04 Apr 2017</td>
+              <td class="hover_card_wrap">
+                Celia Chandler
+                <div class="hover_card"><table><tbody>
+                  <tr><td>Name</td><td>Celia Chandler</td></tr>
+                  <tr><td>Email</td><td>cel.chandler@gmail.com</td></tr>
+                  <tr><td>Total Spent</td><td>$3453.35</td></tr>
+                  <tr><td>Last Order</td><td>#1084</td></tr>
+                </tbody></table></div>
+              </td>
+              <td><div class="stat-text negative"><span></span> Refunded</div></td>
+              <td><span class="stat-text negative">Unfulfilled</span></td>
+              <td class="text-right">$460</td>
+            </tr>
+            <tr class="child_row">
+              <td>
+                <div class="order_thumb">
+                  <a href="#"><img src="images/order_thumb.jpg" alt=""></a>
+                  <span class="order_stat negative">Refunded</span>
+                </div>
+              </td>
+              <td colspan="2">
+                <div class="order_context">
+                  <div class="order_number"><small><img src="images/order_ico/1.png" width="16"/> Ali Order No: <a href="#">Add</a></small></div>
+                  <a href="" class="order_permalink"><b>17KM Fashion Turquoise Necklaces for Women Multi Layer Leaf...</b></a>
+                  <div class="order_id">NJCS132</div>
+                </div>
+              </td>
+              <td><div class="order_context">Stand Packing</div></td>
+              <td><div class="order_context">No Tracking Number</div></td>
+              <td class="text-right"><div class="order_context">3 &nbsp; × &nbsp; <span>$245</span></div><a href="" class="add_to_cart_order"> <span class="tooltip leftside">Click to Order</span></a></td>
+            </tr>
+            <tr class="parent_row">
+              <td><a href="">#0006</a></td>
+              <td>Fri, 12 Jul 2017</td>
+              <td class="hover_card_wrap">
+                Lulu Ferguson
+                <div class="hover_card"><table><tbody>
+                  <tr><td>Name</td><td>Lulu Ferguson</td></tr>
+                  <tr><td>Email</td><td>luluferguson@gmail.com</td></tr>
+                  <tr><td>Total Spent</td><td>$3453.35</td></tr>
+                  <tr><td>Last Order</td><td>#1084</td></tr>
+                </tbody></table></div>
+              </td>
+              <td><div class="stat-text average"><span></span> In Processing</div></td>
+              <td><span class="stat-text negative">Unfulfilled</span></td>
+              <td class="text-right">$460</td>
+            </tr>
+            <tr class="child_row">
+              <td>
+                <div class="order_thumb">
+                  <a href="#"><img src="images/order_thumb.jpg" alt=""></a>
+                  <span class="order_stat average">In Process</span>
+                </div>
+              </td>
+              <td colspan="2">
+                <div class="order_context">
+                  <div class="order_number"><small><img src="images/order_ico/1.png" width="16"/> Ali Order No: <a href="#">Add</a></small></div>
+                  <a href="" class="order_permalink"><b>17KM Fashion Turquoise Necklaces for Women Multi Layer Leaf...</b></a>
+                  <div class="order_id">NJCS132</div>
+                </div>
+              </td>
+              <td><div class="order_context">Stand Packing</div></td>
+              <td><div class="order_context">No Tracking Number</div></td>
+              <td class="text-right"><div class="order_context">3 &nbsp; × &nbsp; <span>$245</span></div><a href="" class="add_to_cart_order"> <span class="tooltip leftside">Click to Order</span></a></td>
+            </tr>
+            <tr class="parent_row">
+              <td><a href="">#0007</a></td>
+              <td>Tue, 16 Nov 2017</td>
+              <td class="hover_card_wrap">
+                Ora Crawford
+                <div class="hover_card"><table><tbody>
+                  <tr><td>Name</td><td>Ora Crawford</td></tr>
+                  <tr><td>Email</td><td>oracrawford@gmail.com</td></tr>
+                  <tr><td>Total Spent</td><td>$3453.35</td></tr>
+                  <tr><td>Last Order</td><td>#1084</td></tr>
+                </tbody></table></div>
+              </td>
+              <td><div class="stat-text good"><span></span> To Order</div></td>
+              <td><span class="stat-text negative">Unfulfilled</span></td>
+              <td class="text-right">$460</td>
+            </tr>
+            <tr class="child_row">
+              <td>
+                <div class="order_thumb">
+                  <a href="#"><img src="images/order_thumb.jpg" alt=""></a>
+                  <span class="order_stat good">To Order</span>
+                </div>
+              </td>
+              <td colspan="2">
+                <div class="order_context">
+                  <div class="order_number"><small><img src="images/order_ico/1.png" width="16"/> Ali Order No: <a href="#">Add</a></small></div>
+                  <a href="" class="order_permalink"><b>17KM Fashion Turquoise Necklaces for Women Multi Layer Leaf...</b></a>
+                  <div class="order_id">NJCS132</div>
+                </div>
+              </td>
+              <td><div class="order_context">Stand Packing</div></td>
+              <td><div class="order_context">No Tracking Number</div></td>
+              <td class="text-right"><div class="order_context">3 &nbsp; × &nbsp; <span>$245</span></div><a href="" class="add_to_cart_order"> <span class="tooltip leftside">Click to Order</span></a></td>
+            </tr>
+            <tr class="parent_row">
+              <td><a href="">#0008</a></td>
+              <td>Sun, 01 Apr 2017</td>
+              <td class="hover_card_wrap">
+                Olive Knight
+                <div class="hover_card"><table><tbody>
+                  <tr><td>Name</td><td>Olive Knight</td></tr>
+                  <tr><td>Email</td><td>oliveknight@gmail.com</td></tr>
+                  <tr><td>Total Spent</td><td>$3453.35</td></tr>
+                  <tr><td>Last Order</td><td>#1084</td></tr>
+                </tbody></table></div>
+              </td>
+              <td><div class="stat-text dead"><span></span> Deleted</div></td>
+              <td><span class="stat-text negative">Unfulfilled</span></td>
+              <td class="text-right">$460</td>
+            </tr>
+            <tr class="child_row">
+              <td>
+                <div class="order_thumb">
+                  <a href="#"><img src="images/order_thumb.jpg" alt=""></a>
+                  <span class="order_stat">Deleted</span>
+                </div>
+              </td>
+              <td colspan="2">
+                <div class="order_context">
+                  <div class="order_number"><small><img src="images/order_ico/1.png" width="16"/> Ali Order No: <a href="#">Add</a></small></div>
+                  <a href="" class="order_permalink"><b>17KM Fashion Turquoise Necklaces for Women Multi Layer Leaf...</b></a>
+                  <div class="order_id">NJCS132</div>
+                </div>
+              </td>
+              <td><div class="order_context">Stand Packing</div></td>
+              <td><div class="order_context">No Tracking Number</div></td>
+              <td class="text-right"><div class="order_context">3 &nbsp; × &nbsp; <span>$245</span></div><a href="" class="add_to_cart_order"> <span class="tooltip leftside">Click to Order</span></a></td>
+            </tr>
+            <tr class="parent_row">
+              <td><a href="">#0009</a></td>
+              <td>Sat, 24 Jul 2017</td>
+              <td class="hover_card_wrap">
+                Nettie Long
+                <div class="hover_card"><table><tbody>
+                  <tr><td>Name</td><td>Nettie Long</td></tr>
+                  <tr><td>Email</td><td>netlong@gmail.com</td></tr>
+                  <tr><td>Total Spent</td><td>$3453.35</td></tr>
+                  <tr><td>Last Order</td><td>#1084</td></tr>
+                </tbody></table></div>
+              </td>
+              <td><div class="stat-text balanced"><span></span> Shipping</div></td>
+              <td><span class="stat-text positive">Fulfilled</span></td>
+              <td class="text-right">$460</td>
+            </tr>
+            <tr class="child_row">
+              <td>
+                <div class="order_thumb">
+                  <a href="#"><img src="images/order_thumb.jpg" alt=""></a>
+                  <span class="order_stat balanced">Shipping</span>
+                </div>
+              </td>
+              <td colspan="2">
+                <div class="order_context">
+                  <div class="order_number"><small><img src="images/order_ico/1.png" width="16"/> Ali Order No: <a href="#">Add</a></small></div>
+                  <a href="" class="order_permalink"><b>17KM Fashion Turquoise Necklaces for Women Multi Layer Leaf...</b></a>
+                  <div class="order_id">NJCS132</div>
+                </div>
+              </td>
+              <td><div class="order_context">Stand Packing</div></td>
+              <td><div class="order_context">No Tracking Number</div></td>
+              <td class="text-right"><div class="order_context">3 &nbsp; × &nbsp; <span>$245</span></div></td>
+            </tr>
+            <tr class="parent_row">
+              <td><a href="">#0010</a></td>
+              <td>Sun, 08 May 2017</td>
+              <td class="hover_card_wrap">
+                Adele Payne
+                <div class="hover_card"><table><tbody>
+                  <tr><td>Name</td><td>Adele Payne</td></tr>
+                  <tr><td>Email</td><td>adelepayne@gmail.com</td></tr>
+                  <tr><td>Total Spent</td><td>$3453.35</td></tr>
+                  <tr><td>Last Order</td><td>#1084</td></tr>
+                </tbody></table></div>
+              </td>
+              <td><div class="stat-text negative"><span></span> Refunded</div></td>
+              <td><span class="stat-text negative">Unfulfilled</span></td>
+              <td class="text-right">$460</td>
+            </tr>
+            <tr class="child_row">
+              <td>
+                <div class="order_thumb">
+                  <a href="#"><img src="images/order_thumb.jpg" alt=""></a>
+                  <span class="order_stat negative">Refunded</span>
+                </div>
+              </td>
+              <td colspan="2">
+                <div class="order_context">
+                  <div class="order_number"><small><img src="images/order_ico/1.png" width="16"/> Ali Order No: <a href="#">Add</a></small></div>
+                  <a href="" class="order_permalink"><b>17KM Fashion Turquoise Necklaces for Women Multi Layer Leaf...</b></a>
+                  <div class="order_id">NJCS132</div>
+                </div>
+              </td>
+              <td><div class="order_context">Stand Packing</div></td>
+              <td><div class="order_context">No Tracking Number</div></td>
+              <td class="text-right"><div class="order_context">3 &nbsp; × &nbsp; <span>$245</span></div><a href="" class="add_to_cart_order"> <span class="tooltip leftside">Click to Order</span></a></td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="page_pagination">
+          <a href="" class="pag_link"></a>
+          <a href="" class="pag_link"></a>
+          <a href="" class="pag_link">1</a>
+          <a href="" class="pag_link current">2</a>
+          <span class="pag_link hidden">...</span>
+          <a href="" class="pag_link">7</a>
+          <a href="" class="pag_link">8</a>
+          <a href="" class="pag_link"></a>
+          <a href="" class="pag_link"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="block padded block-popup narrow heavypadded text-center" id="platform-review">
+    <a href="javascript:;" class="close-popup"><img src="images/close-p.svg" alt=""></a>
+    <h2 class="h3 block-title uppercase">Keep Upinus Free Forever</h2>
+    <img src="images/stars-line.svg" alt="" class="divided-img">
+    <p class="para h6">If you like Upinus , please kindly leave us a <b>5-star review</b></p>
+    <p class="para h6">Your review will motivate us to work harder, create more powerful features, and keep this app <b>FREE FOREVER</b> for you.</p>
+    <div class="product-images-actions clearfix">
+      <a href="javascript:;" class="btn wide end-popup">Write a Quick Review</a>
+      <div><a href="" class="low-end text-color end-popup">I already wrote a Review</a></div>
+    </div>
+  </div>
+  <div class="overlayer"></div>
+</div>
+<script>w3IncludeHTML();</script>
+<script type="text/javascript" src="js/scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="7px" height="4px" viewBox="0 0 7 4" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
+    <title>bc_stat-positive</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Dashboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Home-Dashboard" transform="translate(-350.000000, -301.000000)" fill="#00A141">
+            <g id="Overall" transform="translate(240.000000, 253.000000)">
+                <g id="1">
+                    <g id="Group-16" transform="translate(20.000000, 41.000000)">
+                        <path d="M97,10.5555556 C97,10.6759265 96.9567062,10.7800922 96.8701172,10.8680556 C96.7835282,10.956019 96.6809902,11 96.5625,11 L90.4375,11 C90.3190098,11 90.2164718,10.956019 90.1298828,10.8680556 C90.0432938,10.7800922 90,10.6759265 90,10.5555556 C90,10.4351846 90.0432938,10.331019 90.1298828,10.2430556 L93.1923828,7.13194444 C93.2789718,7.04398104 93.3815098,7 93.5,7 C93.6184902,7 93.7210282,7.04398104 93.8076172,7.13194444 L96.8701172,10.2430556 C96.9567062,10.331019 97,10.4351846 97,10.5555556 Z" id="bc_stat-positive" transform="translate(93.500000, 9.000000) scale(1, -1) rotate(-180.000000) translate(-93.500000, -9.000000) "></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
